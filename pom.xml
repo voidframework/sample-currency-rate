@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.sample</groupId>
+    <artifactId>currency-rate</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <name>VoidFramework - Sample - Currency Converter</name>
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <plugin.version.maven.dependency>3.3.0</plugin.version.maven.dependency>
+
+        <dependency.version.voidframework>1.4.0</dependency.version.voidframework>
+    </properties>
+
+    <modules>
+        <module>currency-rate-datastore</module>
+        <module>currency-rate-domain</module>
+        <module>currency-rate-infrastructure</module>
+        <module>currency-rate-web</module>
+    </modules>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- Currency rate -->
+            <dependency>
+                <groupId>com.sample</groupId>
+                <artifactId>currency-rate-datastore</artifactId>
+                <version>${project.parent.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sample</groupId>
+                <artifactId>currency-rate-domain</artifactId>
+                <version>${project.parent.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.sample</groupId>
+                <artifactId>currency-rate-web</artifactId>
+                <version>${project.parent.version}</version>
+            </dependency>
+
+            <!-- Framework -->
+            <dependency>
+                <groupId>dev.voidframework</groupId>
+                <artifactId>voidframework-core</artifactId>
+                <version>${dependency.version.voidframework}</version>
+            </dependency>
+            <dependency>
+                <groupId>dev.voidframework</groupId>
+                <artifactId>voidframework-datasource-hikaricp</artifactId>
+                <version>${dependency.version.voidframework}</version>
+            </dependency>
+            <dependency>
+                <groupId>dev.voidframework</groupId>
+                <artifactId>voidframework-migration-flyway</artifactId>
+                <version>${dependency.version.voidframework}</version>
+            </dependency>
+            <dependency>
+                <groupId>dev.voidframework</groupId>
+                <artifactId>voidframework-persistence-hibernate</artifactId>
+                <version>${dependency.version.voidframework}</version>
+            </dependency>
+            <dependency>
+                <groupId>dev.voidframework</groupId>
+                <artifactId>voidframework-scheduler</artifactId>
+                <version>${dependency.version.voidframework}</version>
+            </dependency>
+            <dependency>
+                <groupId>dev.voidframework</groupId>
+                <artifactId>voidframework-template-freemarker</artifactId>
+                <version>${dependency.version.voidframework}</version>
+            </dependency>
+            <dependency>
+                <groupId>dev.voidframework</groupId>
+                <artifactId>voidframework-test</artifactId>
+                <version>${dependency.version.voidframework}</version>
+            </dependency>
+            <dependency>
+                <groupId>dev.voidframework</groupId>
+                <artifactId>voidframework-validation</artifactId>
+                <version>${dependency.version.voidframework}</version>
+            </dependency>
+            <dependency>
+                <groupId>dev.voidframework</groupId>
+                <artifactId>voidframework-web</artifactId>
+                <version>${dependency.version.voidframework}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <artifactId>currency-rate</artifactId>
+        <groupId>com.sample</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>currency-rate-infrastructure</artifactId>
+    <name>Currency Converter - Infrastructure</name>
+
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencies>
+        <!-- Currency rate -->
+        <dependency>
+            <groupId>com.sample</groupId>
+            <artifactId>currency-rate-datastore</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.sample</groupId>
+            <artifactId>currency-rate-domain</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.sample</groupId>
+            <artifactId>currency-rate-web</artifactId>
+        </dependency>
+
+        <!-- Framework -->
+        <dependency>
+            <groupId>dev.voidframework</groupId>
+            <artifactId>voidframework-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>dev.voidframework</groupId>
+            <artifactId>voidframework-scheduler</artifactId>
+        </dependency>
+    </dependencies>
+</project>
