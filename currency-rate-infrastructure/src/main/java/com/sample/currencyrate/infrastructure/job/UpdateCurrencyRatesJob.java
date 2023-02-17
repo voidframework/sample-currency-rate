@@ -3,13 +3,13 @@ package com.sample.currencyrate.infrastructure.job;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
 import com.sample.currencyrate.domain.service.CurrencyService;
-import dev.voidframework.core.bindable.BindClass;
+import dev.voidframework.core.bindable.Bindable;
 import dev.voidframework.scheduler.Scheduled;
 
 /**
  * Job to update all currency rates at regular intervals.
  */
-@BindClass
+@Bindable
 @Singleton
 public final class UpdateCurrencyRatesJob {
 
