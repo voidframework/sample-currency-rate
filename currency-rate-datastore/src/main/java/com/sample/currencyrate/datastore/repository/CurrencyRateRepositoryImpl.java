@@ -3,6 +3,7 @@ package com.sample.currencyrate.datastore.repository;
 import com.sample.currencyrate.domain.entity.CurrencyRate;
 import com.sample.currencyrate.domain.enumeration.Currency;
 import com.sample.currencyrate.domain.repository.CurrencyRateRepository;
+import dev.voidframework.core.bindable.Repository;
 
 import java.util.Collection;
 import java.util.List;
@@ -12,6 +13,7 @@ import java.util.concurrent.ConcurrentHashMap;
 /**
  * Implementation of the repository "CurrencyRate".
  */
+@Repository
 public class CurrencyRateRepositoryImpl implements CurrencyRateRepository {
 
     final Map<Currency, CurrencyRate> currencyRateByCurrencyMap;

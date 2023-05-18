@@ -17,7 +17,7 @@
 
         <plugin.version.maven.dependency>3.3.0</plugin.version.maven.dependency>
 
-        <dependency.version.voidframework>1.6.0</dependency.version.voidframework>
+        <dependency.version.voidframework>1.8.0</dependency.version.voidframework>
     </properties>
 
     <modules>

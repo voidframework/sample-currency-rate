@@ -3,6 +3,7 @@ package com.sample.currencyrate.datastore.repository;
 import com.sample.currencyrate.domain.entity.CurrencyRate;
 import com.sample.currencyrate.domain.enumeration.Currency;
 import com.sample.currencyrate.domain.repository.EuropeanCentralBankRepository;
+import dev.voidframework.core.bindable.Repository;
 import org.w3c.dom.Document;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
@@ -23,6 +24,7 @@ import java.util.List;
 /**
  * Implementation of the repository "EuropeanCentralBank".
  */
+@Repository
 public class EuropeanCentralBankRepositoryImpl implements EuropeanCentralBankRepository {
 
     private static final String ECB_EXCHANGE_RATES_ENDPOINT = "https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml";
